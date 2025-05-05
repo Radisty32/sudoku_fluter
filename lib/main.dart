@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
-
+import 'screens/home_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const SudokuApp());
 }
-class MyApp extends StatelessWidget {
-  const MyApp({key? kwy}) : super(key: key);
+
+class SudokuApp extends StatelessWidget {
+  const SudokuApp({super.key});
 
   @override
-  widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Sudoku Game',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      )
-      home: const MyHomePage(),
-    )
+        primarySwatch: Colors.deepPurple,
+        scaffoldBackgroundColor: Colors.grey[900],
+      ),
+      home: const HomeScreen(),
+    );
   }
 }
+
